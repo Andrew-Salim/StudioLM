@@ -3,7 +3,7 @@ Esta é uma página de login desenvolvida com HTML e CSS, criada especialmente p
 🖥️ Visualize a Página
 Você pode acessar e testar a página de login através do link abaixo:
 
-https://luanlmeida.github.io/StudioLM/
+https://Andrew-Salim.github.io/StudioLM/
 
 🚀 Tecnologias Utilizadas
 
