@@ -28,7 +28,12 @@ body {
 }
 
 /* Tipografia  */
-h1, h2, h3, h4, .logo, .btn {
+h1,
+h2,
+h3,
+h4,
+.logo,
+.btn {
     font-family: 'Cinzel', serif;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -64,7 +69,8 @@ ul {
     color: #fff;
 }
 
-.section-title.center, .section-desc.center {
+.section-title.center,
+.section-desc.center {
     text-align: center;
 }
 
@@ -165,8 +171,11 @@ nav {
 
 .hero-overlay {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
@@ -486,12 +495,14 @@ footer p {
         font-size: 2.5rem;
     }
 
-    .two-column, .contact-wrapper {
+    .two-column,
+    .contact-wrapper {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
     .col-img {
-        order: -1; /* Imagem acima do texto no mobile */
+        order: -1;
+        /* Imagem acima do texto no mobile */
     }
 }
