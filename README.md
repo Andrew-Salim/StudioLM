@@ -11,7 +11,7 @@ HTML para estruturar os campos e o formulário de login.
 
 CSS para estilização visual, responsividade e design clean, alinhado à identidade da barbearia.
 
-👨‍💻 Autor
-Luan Almeida – luanlmeidaa7@gmail.com
+👨‍💻 Autores:
 
-Andrew Salim - andrewcouros@icloud.com
+Luan Almeida – luanlmeidaa7@gmail.com
+Andrew Salim – andrewcouros@icloud.com
