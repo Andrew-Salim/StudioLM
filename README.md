@@ -13,4 +13,5 @@ CSS para estilização visual, responsividade e design clean, alinhado à identi
 
 👨‍💻 Autor
 Luan Almeida – luanlmeidaa7@gmail.com
+
 Andrew Salim - andrewcouros@icloud.com
