@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #050505;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Variaveis de Cor */
+:root {
+    --gold: #d4af37;
+    --gold-hover: #bfa145;
+    --dark-bg: #0f0f0f;
+    --darker-bg: #050505;
+    --text-grey: #a0a0a0;
+}
+
+/* Tipografia  */
+h1, h2, h3, h4, .logo, .btn {
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gold-text {
+    color: var(--gold);
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utilitarios */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-padding {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.section-title.center, .section-desc.center {
+    text-align: center;
+}
+
+.section-desc {
+    color: var(--text-grey);
+    margin-bottom: 3rem;
+}
+
+.divider {
+    height: 2px;
+    width: 60px;
+    background-color: var(--gold);
+    margin: 1rem 0 2rem 0;
+}
+
+.center .divider {
+    margin: 1rem auto 2rem auto;
+}
+
+/* Header e Nav */
+header {
+    background-color: rgba(5, 5, 5, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.btn-nav {
+    border: 1px solid var(--gold);
+    padding: 0.5rem 1.5rem;
+    color: var(--gold) !important;
+    border-radius: 2px;
+}
+
+.btn-nav:hover {
+    background-color: var(--gold);
+    color: #000 !important;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 1rem;
+}
+
+.pre-title {
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+/* Botões Gerais */
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: var(--gold);
+    color: #000;
+    border: 2px solid var(--gold);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--gold);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Sobre */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.col-text p {
+    margin-bottom: 1.5rem;
+    color: var(--text-grey);
+}
+
+.col-img img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: -10px 10px 0px var(--gold);
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+}
+
+.col-img img:hover {
+    filter: grayscale(0%);
+}
+
+/* Servicos */
+.section-dark {
+    background-color: #0f0f0f;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #1a1a1a;
+    padding: 2.5rem;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #333;
+}
+
+.service-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.service-card .icon {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.service-card p {
+    color: var(--text-grey);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.service-card .price {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    font-weight: bold;
+}
+
+/* Time */
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    max-width: 300px;
+}
+
+.member-img-box {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 1.5rem auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+}
+
+.member-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    filter: grayscale(100%);
+}
+
+.team-member:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.team-member h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    color: var(--gold);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Contato */
+.contact-section {
+    background-color: #080808;
+    position: relative;
+    padding-top: 4rem;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.info-block {
+    margin-bottom: 2rem;
+}
+
+.info-block h4 {
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.info-block p {
+    color: #ccc;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: #fff;
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+.social-links a:hover {
+    color: var(--gold);
+}
+
+/* Lista de Horários */
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px dashed #333;
+    color: #ddd;
+}
+
+.hours-list li span:first-child {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+.closed {
+    color: #d9534f;
+}
+
+/* Mapa com filtro escuro */
+.map-container {
+    width: 100%;
+    line-height: 0;
+    filter: grayscale(100%) invert(92%) contrast(83%);
+    border-top: 4px solid var(--gold);
+}
+
+/* Footer  */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #222;
+}
+
+footer p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .two-column, .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .col-img {
+        order: -1; /* Imagem acima do texto no mobile */
+    }
+}

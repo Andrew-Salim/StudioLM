@@ -1,52 +1,159 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login</title>
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio LM | Barbearia</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-  <header class="topbar">
-    <div class="topbar-contact"></div>
+    <header>
+        <nav>
+            <div class="logo">STUDIO <span class="gold-text">LM</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#team">Equipe</a></li>
+                <li><a href="#contact" class="btn-nav">Agendar</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
 
-    <nav class="navbar">
-      <div class="navbar-left">
-        <h1>STUDIO <span>LM</span></h1>
-        <p class="slogan">- Estilo e Precisão</p>
-      </div>
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="pre-title">Desde 2023</p>
+            <h1>Estilo & <span class="gold-text">Tradição</span></h1>
+            <p class="subtitle">Cuidando do visual do homem moderno com técnicas clássicas.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary">Agendar Horário</a>
+                <a href="#services" class="btn btn-outline">Nossos Serviços</a>
+            </div>
+        </div>
+    </section>
 
-      <ul>
-        <li><a href="#" class="active">Início</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Serviços</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+    <section id="about" class="section-padding">
+        <div class="container two-column">
+            <div class="col-text">
+                <h2 class="section-title">Barbearia <span class="gold-text">Studio LM</span></h2>
+                <div class="divider"></div>
+                <p>O Studio LM nasceu com um propósito claro: transformar a autoestima do homem moderno. Localizados em Juiz de Fora, no bairro Francisco Bernardino, somos referência regional em soluções estéticas masculinas, com destaque especial para a aplicação de Prótese Capilar e Nanopigmentação.</p>
+                <p>Ambiente climatizado, cerveja gelada e profissionais que entendem o que você precisa. Aqui, cada detalhe foi pensado para o seu conforto.</p>
+                <img src="signature.png" alt="" class="signature-placeholder" style="display:none;"> </div>
+            <div class="col-img">
+                <img src="../img/back.jpg" alt="Interior da Barbearia Studio LM">
+            </div>
+        </div>
+    </section>
 
-  <div class="container">
+    <section id="services" class="section-dark section-padding">
+        <div class="container">
+            <h2 class="section-title center">Nossos <span class="gold-text">Serviços</span></h2>
+            <p class="section-desc center">Excelência em cada detalhe.</p>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-cut"></i></div>
+                    <h3>Corte de Cabelo</h3>
+                    <p>Tesoura ou máquina, degrade ou clássico. O estilo que você procura.</p>
+                    <span class="price">R$ 38,00</span>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-hand-sparkles"></i></div>
+                    <h3>Barba com Toalha Quente</h3>
+                    <p>Toalha quente, navalha e hidratação completa para sua barba.</p>
+                    <span class="price">R$ 30,00</span>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>Combo Completo</h3>
+                    <p>Cabelo, barba e sobrancelha. O tratamento completo.</p>
+                    <span class="price">R$ 80,00</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="sidebar">
-      <h2>STUDIO LM</h2>
+    <section id="team" class="section-padding">
+        <div class="container">
+            <h2 class="section-title center">Nossa <span class="gold-text">Equipe</span></h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-img-box">
+                        <img src="../img/barber1.jpg" alt="João Silva">
+                    </div>
+                    <h3>João Silva</h3>
+                    <p>Master Barber</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-img-box">
+                        <img src="../img/barber1.jpg" alt="Maria Santos">
+                    </div>
+                    <h3>Matheus Dornelas</h3>
+                    <p>Especialista em Visagismo</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <form class="login-form">
-        <label class="email1">Email</label>
-        <input type="email" placeholder="Digite seu email">
+    <section id="contact" class="contact-section">
+        <div class="container contact-wrapper">
+            <div class="contact-info">
+                <h2>Visite-nos</h2>
+                <div class="divider"></div>
+                
+                <div class="info-block">
+                    <h4><i class="fas fa-map-marker-alt"></i> Endereço</h4>
+                    <p>Rua Tomás Gonzaga, 258 - Francisco Bernardino<br>Juiz de Fora - MG</p>
+                </div>
 
-        <label class="senha1">Senha</label>
-        <input type="password" placeholder="Digite sua senha">
+                <div class="info-block">
+                    <h4><i class="fas fa-phone"></i> Contato</h4>
+                    <p>(32) 99137-5457</p>
+                    <p>contato@studiolm.com</p>
+                </div>
 
-        <button type="submit">Entrar</button>
-      </form>
-    </div>
+                <a href="https://wa.me/32991375457" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Agendar Agora
+                </a>
 
-    <div class="imagem">
-      <img src="../img/back.jpg" alt="Imagem">
-    </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
 
-  </div>
+            <div class="contact-hours">
+                <h2>Horário</h2>
+                <div class="divider"></div>
+                <ul class="hours-list">
+                    <li><span>Terça - Sexta</span> <span>09:00 - 20:00</span></li>
+                    <li><span>Sábado</span> <span>08:00 - 18:00</span></li>
+                    <li><span>Segunda - Domingo</span> <span class="closed">Fechado</span></li>
+                </ul>
+            </div>
+        </div>
 
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3706.1794988693086!2d-43.395858499999996!3d-21.734565800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989c1088ed39f3%3A0x678ca9b5c3d42f26!2sStudio%20LM%20Pr%C3%B3tese%20Capilar!5e0!3m2!1spt-BR!2sbr!4v1764114511628!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Studio LM. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        //mobile menu
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
