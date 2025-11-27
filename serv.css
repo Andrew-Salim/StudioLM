@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #050505;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Variaveis de Cor */
+:root {
+    --gold: #d4af37;
+    --gold-hover: #bfa145;
+    --dark-bg: #0f0f0f;
+    --darker-bg: #050505;
+    --text-grey: #a0a0a0;
+}
+
+/* Tipografia */
+h1,
+h2,
+h3,
+h4,
+.btn {
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Cor especial para o titulo */
+.gold-text {
+    color: white; 
+    animation: corUnica 2s forwards;
+}
+
+@keyframes corUnica {
+    from { color: #ffffff; }
+    to   { color: rgb(197, 168, 0); }
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utilitarios */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-padding {
+    /* Ajuste para acomodar o cabeçalho fixo */
+    padding-top: calc(5rem + 70px); 
+    padding-bottom: 5rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+/* Animação para o título */
+.ns {
+    animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+.section-title.center,
+.section-desc.center {
+    text-align: center;
+}
+
+.section-desc {
+    color: var(--text-grey);
+    margin-bottom: 3rem;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Header e Nav */
+header {
+    background-color: rgba(5, 5, 5, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    left: 43%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-left: 2rem; /* Adicionado para espaçamento */
+}
+
+/* Estilo para o link "Serviços" ativo */
+.nav-links a.active {
+    color: var(--gold); 
+    pointer-events: none; 
+    text-decoration: underline; 
+    text-underline-offset: 4px;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+
+/* --- SEÇÃO DE SERVIÇOS --- */
+
+.section-dark {
+    background-color: #0f0f0f;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+
+.service-card .icon {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.service-card p {
+    color: var(--text-grey);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.service-card .price {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    font-weight: bold;
+    position: relative;
+    left: 100px;
+}
+
+/* Botão de Navegação Secundário (Voltar) */
+.btn-nav2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.7rem 1.5rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    background: transparent;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.btn-nav2:hover {
+    background-color: var(--gold);
+    color: #000 !important;
+}
+
+
+
+
+
+footer {
+    background-color: #000;
+    text-align: center; /* ESTE ESTILO DEVE CENTRALIZAR O TEXTO DENTRO DO FOOTER */
+    padding: 2rem;
+    border-top: 1px solid #222;
+}
+
+footer p {
+    color: #666;
+    font-size: 0.9rem;
+}

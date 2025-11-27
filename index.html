@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <header>
         <nav>
             <div class="logo">STUDIO <span class="gold-text">LM</span></div>
@@ -29,7 +28,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <p class="pre-title">Desde 2023</p>
-            <h1>Estilo & <span class="gold-text">Tradição</span></h1>
+            <h1 class="titulo">Estilo & <span class="gold-text">Tradição</span></h1>
             <p class="subtitle">Cuidando do visual do homem moderno com técnicas clássicas.</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn btn-primary">Agendar Horário</a>
@@ -51,14 +50,14 @@
                 <img src="signature.png" alt="" class="signature-placeholder" style="display:none;">
             </div>
             <div class="col-img">
-                <img src="../img/back.jpg" alt="Interior da Barbearia Studio LM">
+                <img class="imz" src="../img/back.jpg" alt="Interior da Barbearia Studio LM">
             </div>
         </div>
     </section>
 
     <section id="services" class="section-dark section-padding">
         <div class="container">
-            <h2 class="section-title center">Nossos <span class="gold-text">Serviços</span></h2>
+            <h2 class="section-title center ns">Nossos <span class="gold-text">Serviços</span></h2>
             <p class="section-desc center">Excelência em cada detalhe.</p>
 
             <div class="service-grid">
@@ -80,6 +79,7 @@
                     <p>Cabelo, barba e sobrancelha. O tratamento completo.</p>
                     <span class="price">R$ 80,00</span>
                 </div>
+               <a href="servicos.html" class="btn-nav2 grid-full"><span class="mais">+</span>Serviços</a>
             </div>
         </div>
     </section>
@@ -140,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="contact-hours">
+            <div class="contact-hours observe">
                 <h2>Horário</h2>
                 <div class="divider"></div>
                 <ul class="hours-list">
@@ -151,7 +151,7 @@
             </div>
         </div>
 
-        <div class="map-container">
+        <div class="map-container observe">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3706.1794988693086!2d-43.395858499999996!3d-21.734565800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989c1088ed39f3%3A0x678ca9b5c3d42f26!2sStudio%20LM%20Pr%C3%B3tese%20Capilar!5e0!3m2!1spt-BR!2sbr!4v1764114511628!5m2!1spt-BR!2sbr"
                 width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -159,17 +159,13 @@
     </section>
 
     <footer>
-        <div class="container">
+        <div class="final">
             <p>© 2023 Studio LM. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script>
-        //mobile menu
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-    </script>
+
+    <script src="scirpt.js"></script>
 </body>
 
 </html>
