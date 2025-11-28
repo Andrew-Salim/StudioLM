@@ -40,13 +40,18 @@ h4,
 }
 
 .gold-text {
-    color:white; 
-      animation: corUnica 2s forwards;
+    color: white;
+    animation: corUnica 2s forwards;
 }
 
 @keyframes corUnica {
-    from { color: #ffffff; }
-    to   { color: rgb(197, 168, 0); }
+    from {
+        color: #ffffff;
+    }
+
+    to {
+        color: rgb(197, 168, 0);
+    }
 }
 
 
@@ -77,21 +82,23 @@ ul {
 }
 
 .ns {
-     animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 @keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-  }
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
 }
 
 
@@ -222,16 +229,18 @@ nav {
 }
 
 @keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .titulo {
@@ -322,7 +331,7 @@ nav {
     background-color: #0f0f0f;
     border-top: 1px solid #222;
     border-bottom: 1px solid #222;
-    
+
 }
 
 .service-grid {
@@ -337,11 +346,11 @@ nav {
     text-align: center;
     transition: 0.3s;
     border: 1px solid #333;
-    opacity: 0; 
+    opacity: 0;
 }
 
 .btn-nav2 {
-   display: inline-flex;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
     padding: 0.7rem 1.5rem;
@@ -355,27 +364,30 @@ nav {
 .btn-nav2:hover {
     background-color: var(--gold);
     color: #000 !important;
-    
+
 }
 
 .grid-full {
-    grid-column: 1 / -1; /* ocupa a linha inteira */
-    justify-self: center; /* centraliza */
+    grid-column: 1 / -1;
+    /* ocupa a linha inteira */
+    justify-self: center;
+    /* centraliza */
 }
 
 .mais {
-   animation: mHis 1.5s infinite linear;
+    animation: mHis 1.5s infinite linear;
     display: inline-block;
     font-size: 30px;
 }
 
 @keyframes mHis {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -407,11 +419,13 @@ nav {
         transform: scale(0);
         opacity: 1;
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
     }
 }
+
 /* FINAL DA ESCALA Ai z */
 
 
@@ -458,17 +472,23 @@ nav {
     text-align: center;
     max-width: 300px;
 }
+
 .team-member p {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0;
-  animation: escrita 3s steps(26, end) forwards;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: escrita 3s steps(26, end) forwards;
 }
 
 @keyframes escrita {
-  from { width: 0; }
-  to   { width: 26ch; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 26ch;
+    }
 }
 
 
@@ -479,7 +499,7 @@ nav {
     overflow: hidden;
     border-radius: 50%;
     border: 3px solid var(--gold);
-     animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+    animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 .member-img-box img {
@@ -492,14 +512,15 @@ nav {
 }
 
 @keyframes scale-in-center {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 
@@ -567,15 +588,17 @@ nav {
 }
 
 @keyframes pulsate-fwd {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 
@@ -672,20 +695,23 @@ footer p {
         /* Imagem acima do texto no mobile */
     }
 }
+
 .imz {
     animation: scale-in-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes scale-in-center {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
+
 /* Animação aplicada nas section tudo*/
 section {
     opacity: 0;
@@ -703,12 +729,13 @@ section.show {
 }
 
 @keyframes text-focus-in {
-  0% {
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    filter: blur(0px);
-    opacity: 1;
-  }
+    0% {
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
 }

@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços</title>
-    
-    <link rel="stylesheet" href="serv.css"> 
-    
+    <title>Serviços | Studio LM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="serv.css">
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="container nav">
-            <a class="logo">STUDIO LM</a>
-            <nav class="nav-links">
-                <a href="index.html">Início</a>
-                <a href="servicos.html" class="active">Serviços</a>
-                <a href="index.html#team">Contato</a>
-            </nav>
-        </div>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">STUDIO <span class="gold-text">LM</span></a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html" class="active">Serviços</a></li>
+                <li><a href="#contact" class="btn-nav">Contato</a></li>
+            </ul>
+
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </nav>
     </header>
 
     <section class="section-padding section-dark">
         <div class="container">
-            <h2 class="section-title center ns">Todos os <span class="gold-text">Serviços</span></h2>
-            <p class="section-desc center">Profissionalismo e qualidade em cada atendimento.</p>
+            <h2 class="section-title center ns">Nossos <span class="gold-text">Serviços</span></h2>
+            <p class="section-desc center">Excelência em cada detalhe.</p>
 
             <div class="service-grid">
 
@@ -33,72 +36,127 @@
                     <div class="icon"><i class="fas fa-cut"></i></div>
                     <h3>Corte Masculino</h3>
                     <p>Do social ao degradê, o corte ideal para você.</p>
-                    <span class="price">R$ 38,00</span>
+                    <div class="price-box">
+                        <span class="price">R$ 38,00</span>
+                    </div>
                 </div>
 
                 <div class="service-card">
                     <div class="icon"><i class="fas fa-hand-sparkles"></i></div>
                     <h3>Barba com Toalha Quente</h3>
                     <p>Relaxamento, hidratação e navalha.</p>
-                    <span class="price">R$ 30,00</span>
+                    <div class="price-box">
+                        <span class="price">R$ 30,00</span>
+                    </div>
                 </div>
 
                 <div class="service-card">
                     <div class="icon"><i class="fas fa-spa"></i></div>
                     <h3>Sobrancelha</h3>
                     <p>Design natural e bem definido.</p>
-                    <span class="price">R$ 15,00</span>
+                    <div class="price-box">
+                        <span class="price">R$ 15,00</span>
+                    </div>
                 </div>
 
                 <div class="service-card">
                     <div class="icon"><i class="fas fa-hot-tub"></i></div>
                     <h3>Massagem Facial</h3>
                     <p>Alívio de tensões e revitalização.</p>
-                    <span class="price">R$ 25,00</span>
+                    <div class="price-box">
+                        <span class="price">R$ 25,00</span>
+                    </div>
                 </div>
 
                 <div class="service-card">
                     <div class="icon"><i class="fas fa-user-tie"></i></div>
                     <h3>Barba Completa + Corte</h3>
                     <p>Pacote completo para visual impecável.</p>
-                    <span class="price">R$ 65,00</span>
+                    <div class="price-box">
+                        <span class="price">R$ 65,00</span>
+                    </div>
                 </div>
 
                 <div class="service-card">
                     <div class="icon"><i class="fas fa-broom"></i></div>
-                    <h3>Peeling de Diamante
-                    </h3>
+                    <h3>Peeling de Diamante</h3>
                     <p>Limpeza profunda e renovação da pele.</p>
-                    <span class="price">R$ 50,00</span>
+                    <div class="price-box">
+                        <span class="price">R$ 50,00</span>
+                    </div>
                 </div>
-
-                
-
-
             </div>
 
-            <div class="center">
-                <a href="index.html" class="btn-nav2" style="margin-top: 2rem;">
-                    Voltar
-                </a>
+            <div class="center" style="margin-top: 3rem;">
+                <a href="index.html" class="btn-nav2">Voltar</a>
             </div>
 
         </div>
     </section>
 
+    <section id="contact" class="contact-section">
+        <div class="container contact-wrapper">
+            <div class="contact-info">
+                <h2>Visite-nos</h2>
+                <div class="divider"></div>
 
- <footer>
-        <div>
+                <div class="info-block">
+                    <h4><i class="fas fa-map-marker-alt"></i> Endereço</h4>
+                    <p>Rua Tomás Gonzaga, 258 - Francisco Bernardino<br>Juiz de Fora - MG</p>
+                </div>
+
+                <div class="info-block">
+                    <h4><i class="fas fa-phone"></i> Contato</h4>
+                    <p>(32) 99137-5457</p>
+                    <p>contato@studiolm.com</p>
+                </div>
+
+                <a href="https://wa.me/32991375457" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Agendar Agora
+                </a>
+
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-hours observe">
+                <h2>Horário</h2>
+                <div class="divider"></div>
+                <ul class="hours-list">
+                    <li><span>Terça - Sexta</span> <span>09:00 - 20:00</span></li>
+                    <li><span>Sábado</span> <span>08:00 - 18:00</span></li>
+                    <li><span>Segunda - Domingo</span> <span class="closed">Fechado</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="map-container observe">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3706.1794988693086!2d-43.395858499999996!3d-21.734565800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989c1088ed39f3%3A0x678ca9b5c3d42f26!2sStudio%20LM%20Pr%C3%B3tese%20Capilar!5e0!3m2!1spt-BR!2sbr!4v1764114511628!5m2!1spt-BR!2sbr"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="final">
             <p>© 2023 Studio LM. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <script>
-         document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
+        // Script do Menu Mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
 
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
     </script>
 
 </body>
+
 </html>

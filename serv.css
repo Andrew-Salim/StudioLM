@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
 
-/* Base */
+/* --- BASE --- */
 * {
     margin: 0;
     padding: 0;
@@ -12,33 +12,28 @@ html {
 }
 
 body {
+    /* FONTE PADRÃO: Montserrat (igual ao Index) */
     font-family: 'Montserrat', sans-serif;
     background-color: #050505;
     color: #e0e0e0;
     line-height: 1.6;
 }
 
-/* Variaveis de Cor */
 :root {
     --gold: #d4af37;
-    --gold-hover: #bfa145;
     --dark-bg: #0f0f0f;
-    --darker-bg: #050505;
     --text-grey: #a0a0a0;
 }
 
-/* Tipografia */
-h1,
-h2,
-h3,
-h4,
-.btn {
+/* --- TIPOGRAFIA TÍTULOS E BOTÕES --- */
+h1, h2, h3, h4, .btn, .logo, .btn-whatsapp {
+    /* FONTE DESTAQUE: Cinzel */
     font-family: 'Cinzel', serif;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* Cor especial para o titulo */
+/* Efeito Dourado */
 .gold-text {
     color: white; 
     animation: corUnica 2s forwards;
@@ -46,7 +41,7 @@ h4,
 
 @keyframes corUnica {
     from { color: #ffffff; }
-    to   { color: rgb(197, 168, 0); }
+    to   { color: rgb(197, 168, 0); }
 }
 
 a {
@@ -58,7 +53,7 @@ ul {
     list-style: none;
 }
 
-/* Utilitarios */
+/* --- UTILITARIOS --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -66,9 +61,19 @@ ul {
 }
 
 .section-padding {
-    /* Ajuste para acomodar o cabeçalho fixo */
-    padding-top: calc(5rem + 70px); 
+    padding-top: calc(5rem + 80px);
     padding-bottom: 5rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.divider {
+    height: 2px;
+    width: 60px;
+    background-color: var(--gold);
+    margin: 1rem 0 2rem 0;
 }
 
 .section-title {
@@ -77,40 +82,22 @@ ul {
     color: #fff;
 }
 
-/* Animação para o título */
-.ns {
-    animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-
-@keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-  }
-}
-
-.section-title.center,
-.section-desc.center {
-    text-align: center;
-}
-
 .section-desc {
     color: var(--text-grey);
     margin-bottom: 3rem;
 }
 
-.center {
-    text-align: center;
+.ns {
+    animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-/* Header e Nav */
+@keyframes tracking-in-contract {
+  0% { letter-spacing: 1em; opacity: 0; }
+  40% { opacity: 0.6; }
+  100% { letter-spacing: normal; opacity: 1; }
+}
+
+/* --- HEADER & NAV --- */
 header {
     background-color: rgba(5, 5, 5, 0.95);
     position: fixed;
@@ -134,8 +121,7 @@ nav {
     font-size: 1.8rem;
     font-weight: 700;
     color: #fff;
-    position: relative;
-    left: 43%;
+    /* Cinzel já aplicado na regra de tipografia */
 }
 
 .nav-links {
@@ -143,42 +129,67 @@ nav {
     align-items: center;
 }
 
+.nav-links li {
+    margin-left: 2rem;
+}
+
 .nav-links a {
     color: #fff;
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 1px;
-    margin-left: 2rem; /* Adicionado para espaçamento */
-}
-
-/* Estilo para o link "Serviços" ativo */
-.nav-links a.active {
-    color: var(--gold); 
-    pointer-events: none; 
-    text-decoration: underline; 
-    text-underline-offset: 4px;
 }
 
 .nav-links a:hover {
     color: var(--gold);
 }
 
-
-/* --- SEÇÃO DE SERVIÇOS --- */
-
-.section-dark {
-    background-color: #0f0f0f;
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
+/* BOTÃO CONTATO - Cinzel (para igualar o botão Agendar da Home) */
+.btn-nav {
     
+    border: 1px solid var(--gold);
+    padding: 0.5rem 1.5rem;
+    color: var(--gold) !important;
+    border-radius: 2px;
+    transition: 0.3s;
 }
 
+.btn-nav:hover {
+    background-color: var(--gold);
+    color: #000 !important;
+}
+
+.menu-toggle {
+    display: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* --- SERVIÇOS CARDS --- */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
+.service-card {
+    background-color: #0f0f0f;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border: 1px solid #222;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
 
 .service-card .icon {
     font-size: 2.5rem;
@@ -189,52 +200,140 @@ nav {
 .service-card h3 {
     margin-bottom: 1rem;
     color: #fff;
+    font-size: 1.2rem;
 }
 
 .service-card p {
     color: var(--text-grey);
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.price-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .service-card .price {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #000;
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
     color: var(--gold);
     border: 1px solid var(--gold);
     font-weight: bold;
-    position: relative;
-    left: 100px;
+    font-family: 'Cinzel', serif;
 }
 
-/* Botão de Navegação Secundário (Voltar) */
+/* Botão Voltar */
 .btn-nav2 {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 0.7rem 1.5rem;
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
     border: 1px solid var(--gold);
     color: var(--gold);
     background: transparent;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
     border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-    font-family: 'Montserrat', sans-serif; 
 }
 
 .btn-nav2:hover {
     background-color: var(--gold);
-    color: #000 !important;
+    color: #000;
 }
 
+/* --- CONTATO & FOOTER --- */
+.contact-section {
+    background-color: #080808;
+    position: relative;
+    padding-top: 4rem;
+    border-top: 1px solid #222;
+    margin-top: 4rem;
+}
 
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
 
+.info-block {
+    margin-bottom: 2rem;
+}
 
+.info-block h4 {
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.info-block p {
+    color: #ccc;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: #fff;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    animation: pulsate-fwd 2s ease-in-out infinite both;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    color: #fff;
+}
+
+@keyframes pulsate-fwd {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+.social-links a:hover {
+    color: var(--gold);
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px dashed #333;
+    color: #ddd;
+}
+
+.hours-list li span:first-child {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+.closed {
+    color: #d9534f;
+}
+
+.map-container {
+    width: 100%;
+    line-height: 0;
+    filter: grayscale(100%) invert(92%) contrast(83%);
+    border-top: 4px solid var(--gold);
+}
 
 footer {
     background-color: #000;
-    text-align: center; /* ESTE ESTILO DEVE CENTRALIZAR O TEXTO DENTRO DO FOOTER */
+    text-align: center;
     padding: 2rem;
     border-top: 1px solid #222;
 }
@@ -242,4 +341,26 @@ footer {
 footer p {
     color: #666;
     font-size: 0.9rem;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        padding: 2rem 0;
+        border-bottom: 1px solid #333;
+    }
+
+    .nav-links.active { display: flex; }
+    .nav-links li { margin: 1rem 0; }
+    
+    .contact-wrapper { grid-template-columns: 1fr; gap: 2rem; }
 }
